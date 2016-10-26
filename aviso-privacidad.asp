@@ -12,9 +12,11 @@
 
 	#wrap
 	{
-		width: 650px;
+		width: calc(100% - 40px);
+		max-width: 650px;
 		margin: 0 auto;
-		padding-bottom: 100px;
+		padding: 0 0px 10px;
+		overflow: hidden;
 	}
 
 	h1

@@ -430,46 +430,12 @@ header:after{
 }
 
 
-.gradiente-azul {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1ed5dc+0,1ebfdc+100 */
-    background: #1ed5dc;/* Old browsers */
-    background: 
-    -moz-linear-gradient(top,  #1ed5dc 0%, #1ebfdc 100%);/* FF3.6-15 */
-    background: 
-    -webkit-linear-gradient(top,  #1ed5dc 0%,#1ebfdc 100%);/* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #1ed5dc 0%,#1ebfdc 100%);/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1ed5dc', endColorstr='#1ebfdc',GradientType=0 );/* IE6-9 */
+.gradiente-azul {
+    background-image: -moz-linear-gradient( 90deg, rgb(30,191,220) 0%, rgb(30,213,220) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(30,191,220) 0%, rgb(30,213,220) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(30,191,220) 0%, rgb(30,213,220) 100%);
 }
 
-@media screen and ( max-height: 700px ){
-    
-}
-@media screen and (max-height: 600px){
-   
-}
-@media only screen and (max-width : 1150px) {
-}
-@media only screen and (max-width : 1100px){
-}
-@media only screen and (max-width : 1024px) {
-}
-@media only screen and (max-width : 900px) {  
-}
-@media only screen and (max-width : 768px) {
-}
-@media only screen and (max-width : 667px) {
-}
-@media only screen and (max-width : 600px) {
-}
-
-@media only screen and (max-width : 480px) {
-  
-}
-@media only screen and (max-width : 360px){
-  
-}
-@media only screen and (max-width : 320px) {
-  
-}
 
 body {
     background: url(../img/fondo_emocion.jpg) no-repeat top center;
@@ -574,10 +540,10 @@ footer {
 }
 
 .gradiente-gris {
-    background-image: -moz-linear-gradient( 90deg, rgb(24,24,24) 0%, rgb(49,49,49) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(24,24,24) 0%, rgb(49,49,49) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(24,24,24) 0%, rgb(49,49,49) 100%);
-    opacity: 0.8;
+    background-image: -moz-linear-gradient( 90deg, rgba(24,24,24,0.8) 0%, rgba(49,49,49,0.8) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgba(24,24,24,0.8) 0%, rgba(49,49,49,0.8) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgba(24,24,24,0.8) 0%, rgba(49,49,49,0.8) 100%);
+    opacity: 1;
     box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -585,15 +551,30 @@ footer {
     font-size: 46px;
     font-weight: 500;
     text-align: center;
-    margin: 0 0 20px;
+    margin: 0 0 0px;
     line-height: 36px;
+}
+
+.gracias-actualiza p.titulo {
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0 20px;
+}
+
+.subtitulo.pasos {
+    margin-bottom: 5px;
 }
 
 p.parrafo-reg {
     font-size: 16px;
-    max-width: 550px;
+    max-width: 630px;
     text-align: center;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
 }
 
 label.lbl-form {
@@ -873,4 +854,87 @@ p.contacto-atencion a {
     font-weight: bold;
     color: #848484;
     text-decoration: none;
+}
+@media screen and ( max-height: 850px ){
+    .contenedor-all.registro{height:auto;}
+    .contenedor-all.registro .desplazamiento{padding-top: 30px;min-height: 900px;height: auto;}
+    .contenedor-all.registro .contenido{padding:20px 0;}
+}
+@media screen and ( max-height: 750px ){
+    .desplazamiento{padding-top: 30px;min-height: 900px;height: auto;}
+    .contenedor-all{height:auto;}
+    .contenido{padding:20px 0;}
+}
+@media screen and (max-height: 600px){
+   
+}
+@media only screen and (max-width : 1460px) {
+    .videoFullScreen{width:1500px;}
+}
+@media only screen and (max-width : 1100px){
+}
+@media only screen and (max-width : 1024px) {
+    
+    .desplazamiento{padding-top:15px;padding-bottom:15px;width: calc(100% - 60px);}
+    .titulo{font-size: 36px;line-height: 26px;}
+    .subtitulo{font-size: 20px;margin-bottom: 15px;}
+    p.parrafo-reg{font-size:15px;}
+    form#registroCorreo{padding: 40px 60px;}
+    .actualizacion-formulario form{padding: 40px 40px;}
+    .actualizacion-formulario input.input-full, .actualizacion-formulario select.selectbox{padding: 5px 10px;}
+
+}
+@media only screen and (max-width : 900px) {  
+}
+@media only screen and (max-width : 768px) {
+    .fancybox-type-iframe .fancybox-inner{max-width:calc(100vw - 60px);width: calc(100vw - 60px)!important;}
+    .fancybox-type-iframe .fancybox-iframe{width: 100vw!important;max-width: calc(100vw - 60px)!important;}
+    .fancybox-type-iframe.layer.fancybox-opened{width: 100vw!important;max-width: calc(100vw - 60px)!important;}
+}
+@media only screen and (max-width : 667px) {
+    .titulo{font-size: 26px;line-height: 20px;}
+    .subtitulo{font-size: 16px;margin-bottom: 10px;}
+    .desplazamiento{min-height: auto;height: 100vh;}
+    form#registroCorreo{padding: 20px 30px;}
+    .actualizacion-formulario form{padding: 20px;}
+    input.input-full, select.selectbox{padding: 10px;}
+    .submit-actions{margin-top: 20px;}
+    .btn{padding: 10px 15px;}
+    label.lbl-form{font-size: 15px;}
+    footer{flex-flow: column;height: auto;}
+    .envio-correo span.br{display:none;}
+    .instrucciones-correo span.br{display:none;}
+    .formulario-top{flex-flow: column;}
+    .formulario-top > .campo {width: 100%;margin-bottom: 10px;}
+    .actualizacion-formulario .submit-actions .btn{padding:10px 15px;}
+    .tyc:after{display:block;clear:both;content:'';}
+    label.lbl-aviso{float:right;width: calc(100% - 40px);text-align:left;position:relative;top:-7px;margin-left: 15px;}
+    body.registro{background-attachment: fixed;}
+    .layer .fancybox-inner > div:first-child{max-width: calc(100vw - 60px);}
+    span.titConfirm{font-size: 20px;line-height: 25px;padding: 15px;}
+    .detallePodio{padding: 20px;}
+    p.dudas{font-size:18px;}
+}
+@media only screen and (max-width : 600px) {
+}
+
+@media only screen and (max-width : 480px) {
+  
+}
+@media only screen and (max-width : 375px){
+    .desplazamiento{width: calc(100% - 30px);}
+    p.parrafo-reg{font-size:14px;margin-bottom: 10px;}
+    .titulo{font-size: 20px;}
+    .subtitulo{font-size: 14px;}
+    footer{font-size:10px;}
+    input.input-full, select.selectbox{padding: 5px 10px;}
+    .btn{padding: 5px 10px;width: 100%;}
+    .actualizacion-formulario .submit-actions .btn{padding:5px 10px;}
+  
+}
+@media only screen and (max-width : 320px) {
+
+    .formulario-top > .campo .fecha{flex-flow: column;justify-content: center;}
+    .formulario-top > .campo .fecha > select.selectbox {width: 100%!important;margin: 0 0 10px!important;}
+
 }

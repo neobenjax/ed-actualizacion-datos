@@ -1,5 +1,6 @@
 <%
 paso = Request.QueryString("p")
+ref = Request.QueryString("ref")
 %>
 <!doctype html>
 <html class="no-js" lang="es" ng-app="app">
@@ -24,10 +25,10 @@ paso = Request.QueryString("p")
 <script type="text/javascript" src="assets/js/librerias/matchMedia.js"></script>
 <script type="text/javascript" src="assets/js/librerias/placeholder_fix.js"></script>
 </head>
-<body>
+<body class="<%=paso%>">
 
 
-	<div class="contenedor-all">
+	<div class="contenedor-all <%=paso%>">
 		
 		<div class="videoFullScreen" id="bgvid"></div>
 
@@ -36,12 +37,18 @@ paso = Request.QueryString("p")
 			<header>
 				<a href="#" class="logo-emocion">Emoción Deportiva</a>
 				<ul class="redes-sociales">
-					<li><a href="#" class="facebook" target="_blank">Facebook</a></li>
-					<li><a href="#" class="twitter" target="_blank">Twitter</a></li>
-					<li><a href="#" class="instagram" target="_blank">Instagram</a></li>
-					<li><a href="#" class="redsocial_1" target="_blank">Pin</a></li>
+					<li>
+						<a href="https://www.facebook.com/EmocionDeportiva/" class="facebook" target="_blank">Facebook</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/emocionD" class="twitter" target="_blank">Twitter</a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/emociondeportiva/" class="instagram" target="_blank">Instagram</a>
+					</li>
+					<!--li><a href="#" class="redsocial_1" target="_blank">Pin</a></li>
 					<li><a href="#" class="Pinterest" target="_blank">Pinterest</a></li>
-					<li><a href="#" class="Youtube" target="_blank">Youtube</a></li>
+					<li><a href="#" class="Youtube" target="_blank">Youtube</a></li-->
 				</ul>
 			</header>
 
@@ -55,15 +62,22 @@ paso = Request.QueryString("p")
 						<h1 class="titulo">
 							¡Nos estamos renovando!
 						</h1>
+						<h2 class="subtitulo">
+							Espera muy pronto nuestra nueva imagen.
+						</h2>
 						<p class="parrafo-reg">
-							Para mantener tu usuario y seguir participando en eventos de Emoción Deportiva, es necesario que ingreses tu correo electrónico:
+							Para continuar disfrutando de los eventos que en Emoción Deportiva 
+							<span class="br"></span> 
+							tenemos para tí y buscando brindarte un mejor servicio te pedimos 
+							<span class="br"></span>
+							nos confirmes tus datos en 3 simples pasos: 
 						</p>
 
 						<div class="gradiente-gris formulario">
 							<form action="?p=validar" id="registroCorreo" method="POST">
 								<ul class="campos-formulario">
 									<li>
-										<label for="e-mail" class="lbl-form">Correo electrónico:</label>
+										<label for="e-mail" class="lbl-form">1. Ingresa tu correo electrónico:</label>
 										<input type="email" class="input-full" placeholder="jorgemacias@gmail.com" name="e-mail" required>
 									</li>
 								</ul>
@@ -84,11 +98,13 @@ paso = Request.QueryString("p")
 				%>
 
 					<div id="instruccionesCorreo" class="instrucciones-correo">
-						<p class="titulo">
-							Valida tu correo electrónico
+						<p class="subtitulo">
+							2. Valida tu correo electrónico.
 						</p>
 						<p class="parrafo-reg">
-							Para poder continuar es necesario validar tu correo electrónico. Revisa tu bandeja de entrada y haz click en el enlace adjunto.
+							Para poder continuar, es necesario validar tu correo electrónico,
+							<span class="br"></span>
+							 haciendo clic el mensaje que te hemos enviado.
 						</p>
 					</div>
 
@@ -101,12 +117,24 @@ paso = Request.QueryString("p")
 				%>
 					<div class="registro-datos" id="registroDatos">
 
-						<h1 class="titulo">
-							¡Nos estamos renovando!
-						</h1>
-						<p class="parrafo-reg">
-							Para mantener tu usuario y seguir participando en eventos de Emoción Deportiva, es necesario que actualices la siguiente información:
-						</p>
+						<% if ref = "pasos" then %>
+							<h2 class="subtitulo pasos">
+								3. Confírmanos tus datos.
+							</h2>
+							<p class="parrafo-reg">
+								Esto te permitirá disfrutar la nueva experiencia que tenemos para tí.
+							</p>
+						<% else %>
+							<h1 class="titulo">
+								¡Nos estamos renovando!
+							</h1>
+							<h2 class="subtitulo">
+								Espera muy pronto nuestra nueva imagen.
+							</h2>
+							<p class="parrafo-reg">
+								Para continuar disfrutando de los eventos que en Emoción Deportiva tenemos para tí y buscando brindarte un mejor servicio te pedimos nos confirmes tus datos:
+							</p>
+						<% end if %>
 
 						<div class="gradiente-gris actualizacion-formulario">
 
@@ -216,17 +244,27 @@ paso = Request.QueryString("p")
 					    </div>
 					    <div class="detallePodio TXT_JUSTIFY GRIS">
 					        <span class="instrucLayer">
-					            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sit molestias, sint ducimus a totam ea officia doloremque, laboriosam illum excepturi, fugiat, hic doloribus aliquam laudantium neque incidunt dolores omnis.
+					            Tener actualizados tus datos te permitirá acceder a los diferentes servicios que tenemos para ti, al igual que nos facilita mantener contacto permanente contigo y de este modo darte a conocer información que sea de tu interés a través boletines y correos electrónicos.
+					            <br><br>
+								También podrás vivir una mejor experiencia en tu proceso de registro y consulta de resultados de los eventos que participes y sean operados por Emoción Deportiva.
 					        </span>
 					        <p class="dudas">
 					        	¿Tienes alguna duda?
 					        </p>
 					        <p class="contacto-atencion">
-					        	Llama al <a href="tel:0180012345678">01 800 1234 5678</a>
+					        	Llama al 
+					        	<span class="br"></span>
+					        	<a href="tel:018008013662">01800 801 3662</a>
+					        	<span class="br"></span>
+					        	Interior de la República (Llamadas foráneas)
+					        	<span class="br"></span>
+					        	<a href="tel:41237539">41 23 75 39</a>
+					        	<span class="br"></span>
+					        	D.F. y Área Metropolitana (Llamadas locales)
 					        	<span class="br"></span>
 								o escribe un correo a
 								<span class="br"></span>
-								<a href="mailto:contacto@emociondeportiva.com">contacto@emociondeportiva.com</a>
+								<a href="mailto:cronometraje@marti.com.mx">cronometraje@marti.com.mx</a>
 					        </p>
 					    </div>
 					</div>
@@ -242,7 +280,7 @@ paso = Request.QueryString("p")
 							¡Gracias!
 						</p>
 						<p class="parrafo-reg">
-							Tu registro se ha actualizado correctamente. Muy pronto podrás disfrutar de los beneficios de tener tu usuario actualizado en Emoción Deportiva.
+							Tu registro se ha actualizado correctamente.
 						</p>
 					</div>
 				<%

@@ -30,7 +30,7 @@ $(document).ready(function(){
 	matchMax480 = window.matchMedia('(max-width: 480px)');
 	matchMax320 = window.matchMedia('(max-width: 320px)');
 
-	if(!matchMax667.matches){
+	if(!matchMax1024.matches){
 		video = '<video loop autoplay > \
 	                <source src="assets/video/videofondo.webm" type="video/webm"> \
 	                <source src="assets/video/videofondo.mp4" type="video/mp4"> \
