@@ -32,9 +32,9 @@ $(document).ready(function(){
 
 	if(!matchMax1024.matches){
 		video = '<video loop autoplay > \
-	                <source src="assets/video/videofondo.webm" type="video/webm"> \
-	                <source src="assets/video/videofondo.mp4" type="video/mp4"> \
-	                <source src="assets/video/videofondo.ogv" type="video/ogv"> \
+	                <source src="assets/video/video_fondo_final.webm" type="video/webm"> \
+	                <source src="assets/video/video_fondo_final.mp4" type="video/mp4"> \
+	                <source src="assets/video/video_fondo_final.ogv" type="video/ogv"> \
 	            </video>';
 	    $('#bgvid').html(video).addClass('on');
 	}

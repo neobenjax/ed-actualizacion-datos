@@ -909,7 +909,9 @@ p.contacto-atencion a {
     .actualizacion-formulario .submit-actions .btn{padding:10px 15px;}
     .tyc:after{display:block;clear:both;content:'';}
     label.lbl-aviso{float:right;width: calc(100% - 40px);text-align:left;position:relative;top:-7px;margin-left: 15px;}
-    body.registro{background-attachment: fixed;}
+    body.registro{
+    background: #0e1b21 url(../img/fondo_emocion_formulario.jpg) no-repeat top center;
+}
     .layer .fancybox-inner > div:first-child{max-width: calc(100vw - 60px);}
     span.titConfirm{font-size: 20px;line-height: 25px;padding: 15px;}
     .detallePodio{padding: 20px;}
